@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Pikabu – Bilder entdecken</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📸 Pikabu</h1>
+  <p>Bilder entdecken, liken & kommentieren</p>
+</header>
+
+<main class="gallery">
+
+  <div class="card">
+    <img src="HIER_DEIN_IMGUR_BILD_LINK" alt="Bild">
+    <button onclick="like(this)">❤️ Like <span>0</span></button>
+
+    <div id="disqus_thread"></div>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+
+<script>
+var disqus_config = function () {
+this.page.url = window.location.href;
+this.page.identifier = "pikabu-start";
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://DEIN_SHORTNAME.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+</body>
+</html>
